@@ -11,7 +11,7 @@ In many cases, there's more than one reasonable approach. The files linked here 
 
 <dl>
 
-<dt id="p01">(*) Find the last element of a list.**</dt>
+<dt id="p01">(*) Find the last element of a list.</dt>
 <dd>Example:
 <pre>scala> last(List(1, 1, 2, 3, 5, 8))
 res0: Int = 8</pre>
@@ -19,16 +19,14 @@ res0: Int = 8</pre>
 <b>Scala solution:</b> <a href="https://github.com/tamaslang/ninetynine-coding-problems/blob/master/scala-ninetynine/src/main/scala-2.11/org/talangsoft/codingtests/p01LastElementInList.scala">p01LastElementInList.scala</a>
 </dd>
 
-
-
-
-<dt id="p02">**[P02](p02.scala) (*) Find the last but one element of a list.**</dt>
+<dt id="p02">(*) Find the last but one element of a list.</dt>
 
 <dd>Example:
 
 <pre>scala> penultimate(List(1, 1, 2, 3, 5, 8))
 res0: Int = 5</pre>
 
+<b>Scala solution:</b> <a href="https://github.com/tamaslang/ninetynine-coding-problems/blob/master/scala-ninetynine/src/main/scala-2.11/org/talangsoft/codingtests/p02Penultimate.scala">p02Penultimate.scala</a>
 </dd>
 
 <dt id="p03">**[P03](p03.scala) (*) Find the _K_th element of a list.**</dt>

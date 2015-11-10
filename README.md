@@ -1,5 +1,5 @@
 # S-99: Ninety-Nine Scala Problems
-See original html description <a href="https://github.com/tamaslang/scala-ninetynine/blob/master/docs/99_coding_task.html">HERE</a>
+See original html description <a href="https://github.com/tamaslang/ninetynine-coding-problems/blob/master/docs/99_coding_task.html">HERE</a>
 
 ## Working with lists
 

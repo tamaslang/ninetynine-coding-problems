@@ -2,7 +2,7 @@ package org.talangsoft.codingtests
 
 import org.scalatest.{ShouldMatchers, WordSpec}
 
-class p16DropSpec extends WordSpec with ShouldMatchers {
+class p16dropSpec extends WordSpec with ShouldMatchers {
 
   "drop" should {
     "drop every 3rd element in list" in {

@@ -1,11 +1,18 @@
 package org.talangsoft.codingtests
 
-/**
- **[P24](p24.scala) (*) Lotto: Draw _N_ different random numbers from the set 1.._M_.**
-Example:
-scala> lotto(6, 49)
-res0: List[Int] = List(23, 1, 17, 33, 21, 37)
- */
-object p24lotto {
+import scala.util.Random
 
+object p24lotto {
+  def lotto(take:Int, intervalEnd:Int):List[Int] = {
+    randomSelect(take,1 to intervalEnd toList)
+  }
+
+  def randomSelect[T](times: Int, l: List[T]): List[T] = {
+    if(times > 0) removeAt(Random.nextInt(l.size), l) match { case (list,el) => List(el):::randomSelect(times-1,list)}
+    else List()
+  }
+
+  def removeAt[T](pos:Int, l: List[T]): (List[T],T) = {
+    l.splitAt(pos) match {case (begin,end) => (begin:::end.tail,end.head)}
+  }
 }

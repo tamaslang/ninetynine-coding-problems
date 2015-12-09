@@ -1,12 +1,53 @@
 package org.talangsoft.codingtests
 
-/**
- **[P26](p26.scala) (**) Generate the combinations of _K_ distinct objects chosen from the _N_ elements of a list.**
-In how many ways can a committee of 3 be chosen from a group of 12 people? We all know that there are `C(12,3) = 220` possibilities (`C(N,K)` denotes the well-known binomial coefficient). For pure mathematicians, this result may be great. But we want to really generate all the possibilities. Example:
-scala> combinations(3, List('a, 'b, 'c, 'd, 'e, 'f))
-res0: List[List[Symbol]] = List(List('a, 'b, 'c), List('a, 'b, 'd), List('a, 'b, 'e), ...
+import scala.annotation.tailrec
 
- */
 object p26combinations {
 
+  def combinations[T](take: Int, options: List[T]) : List[List[T]] = {
+    def combinationsRec(take:Int, current: List[T], options: List[T]):List[List[T]] = {
+      if(take == 0) List(current)
+      else if(options.size >= take){
+          combinationsRec(take-1,current :+ options.head,options.tail) :::
+          combinationsRec(take,current,options.tail)
+      }
+      else List()
+    }
+    combinationsRec(take,List(),options)
+  }
 }
+//
+//
+//
+//1 2 3 4
+//
+//--------
+//1 2 3
+//1 2 4
+//2 3 4
+//
+//
+//1 2 3 4
+//if listsize >= take - taken
+//do take       (1) ()
+//do nottake    ( ) ()
+//
+//1 -> 1 2 3 4
+//2 -> 2 3 4
+
+//take: 3 combination () list: (1 2 3 4)
+//take: 2 combination (1) list(2 3 4)
+//      take: 2 combination (1) list(2 3 4)
+//      take: 2 combination (1) list(2 3 4)
+//
+//1 2 3
+//
+//1 2 4
+//
+//1 2 5
+//
+//1 3 4
+//
+//1 3 5
+//
+//1 4 5

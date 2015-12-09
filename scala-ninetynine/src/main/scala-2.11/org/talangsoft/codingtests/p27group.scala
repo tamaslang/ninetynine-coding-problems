@@ -8,7 +8,8 @@ res0: List[List[List[String]]] = List(List(List(Aldo, Beat), List(Carla, David, 
 b) Generalize the above predicate in a way that we can specify a list of group sizes and the predicate will return a list of groups. Example:
 scala> group(List(2, 2, 5), List("Aldo", "Beat", "Carla", "David", "Evi", "Flip", "Gary", "Hugo", "Ida"))
 res0: List[List[List[String]]] = List(List(List(Aldo, Beat), List(Carla, David), List(Evi, Flip, Gary, Hugo, Ida)), ...
-Note that we do not want permutations of the group members; i.e. ((Aldo, Beat), ...) is the same solution as ((Beat, Aldo), ...). However, we make a difference between ((Aldo, Beat), (Carla, David), ...) and ((Carla, David), (Aldo, Beat), ...). You may find more about this combinatorial problem in a good book on discrete mathematics under the term "multinomial coefficients"
+Note that we do not want permutations of the group members; i.e. ((Aldo, Beat), ...) is the same solution as ((Beat, Aldo), ...). However, we make a difference between ((Aldo, Beat), (Carla, David), ...) and ((Carla, David), (Aldo, Beat), ...).
+You may find more about this combinatorial problem in a good book on discrete mathematics under the term "multinomial coefficients"
  */
 object p27group {
 
